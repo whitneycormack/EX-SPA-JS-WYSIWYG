@@ -55,21 +55,21 @@ function mirrorText(currentCard) { /* pulling currentCard from 'this' in dottedB
   userInput.addEventListener("keyup", function(event) {
     if (currentCard.classList.contains("dots")) {
       currentCard.querySelector("section").innerHTML = userInput.value;
-      clearText();
     }
+    clearText(currentCard);
   })
 }
 
 // when press enter key, then input value should clear
 
-function clearText() {
+function clearText(currentCard) {
   userInput.addEventListener("keydown", function(event) {
     if (event.keyCode === 13) {
+      currentCard.classList.remove("dots");
       userInput.value = "";
     }
   })
 }
-
 
 getPeople(); /* last function to be called on this page - runs everything */
 
