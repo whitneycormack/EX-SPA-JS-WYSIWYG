@@ -55,18 +55,20 @@ function mirrorText(currentCard) { /* pulling currentCard from 'this' in dottedB
   userInput.addEventListener("keyup", function(event) {
     if (currentCard.classList.contains("dots")) {
       currentCard.querySelector("section").innerHTML = userInput.value;
-          }
-          // else if (event.keycode === 13) {
-          //   userInput.value = "";
-      })
+      clearText();
     }
-
-
-
+  })
+}
 
 // when press enter key, then input value should clear
 
-
+function clearText() {
+  userInput.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) {
+      userInput.value = "";
+    }
+  })
+}
 
 
 getPeople(); /* last function to be called on this page - runs everything */
