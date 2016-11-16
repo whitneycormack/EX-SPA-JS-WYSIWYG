@@ -1,0 +1,16 @@
+.yellow {
+  background-color: yellow;
+}
+
+.blue {
+  background-color: lightblue;
+}
+
+.dots {
+  border: dotted 2px black;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+}
